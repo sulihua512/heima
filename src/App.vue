@@ -4,13 +4,13 @@
   </div>
 </template>
 <script>
-import request from './utils/request'
+// import request from './utils/request'
 export default {
-  created () {
-    request.get('/app/v1_0/user/channels').then(res => {
-      console.log(res)
-    })
-  }
+  // created () {
+  //   request.get('/app/v1_0/user/channels').then(res => {
+  //     console.log(res)
+  //   })
+  // }
 }
 </script>
 <style lang="less">
