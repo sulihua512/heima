@@ -3,7 +3,7 @@
 </template>
 
 <script>
-export default { name: 'Question', data () { return {} } }
+export default { name: 'QuestionIndex', data () { return {} } }
 </script>
 
 <style scoped lang='less'></style>

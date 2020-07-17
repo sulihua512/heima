@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/index'
+import Layout from '../views/Layout.vue'
 
 Vue.use(VueRouter)
 
@@ -8,15 +9,15 @@ const routes = [
   // 首页
   {
     path: '/',
-    component: Home,
+    component: Layout,
     children: [
-      { path: '/', name: 'Home', component: () => import('../views/home/index.vue') },
+      { path: '/', name: 'Home', component: Home },
       { path: '/question', name: 'Question', component: () => import('../views/question/index.vue') },
       { path: '/video', name: 'Video', component: () => import('../views/video/index.vue') },
       { path: '/user', name: 'User', component: () => import('../views/user/index.vue') }
     ]
   },
-  // 登录页(组件懒加载)
+  // 登录页
   { path: '/login', component: () => import('../views/login/index.vue') }
 ]
 

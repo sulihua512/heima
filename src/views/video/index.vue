@@ -3,7 +3,7 @@
 </template>
 
 <script>
-export default { name: 'Video', data () { return {} } }
+export default { name: 'VideoIndex', data () { return {} } }
 </script>
 
 <style scoped lang='less'></style>

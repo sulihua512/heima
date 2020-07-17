@@ -1,15 +1,18 @@
 <template>
-  <div class='container'></div>
+  <div class='container'>
+    布局组件
+    <router-view></router-view>
+    </div>
 </template>
 
 <script>
 export default {
-    name: '',
-    data () {
-      return {
+  name: 'LayoutIndex',
+  data () {
+    return {
 
-      }
     }
+  }
 }
 </script>
 

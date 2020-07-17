@@ -3,7 +3,7 @@
 </template>
 
 <script>
-export default { name: 'User', data () { return {} } }
+export default { name: 'UserIndex', data () { return {} } }
 </script>
 
 <style scoped lang='less'></style>
