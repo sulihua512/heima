@@ -13,6 +13,7 @@
 
 <script>
 import { login } from '@/api/user'
+import { mapMutations } from 'vuex'
 export default {
   name: 'loginIndex',
   data () {
@@ -28,6 +29,8 @@ export default {
     }
   },
   methods: {
+    // 将vuex中的setUser映射为该组件中的方法
+    ...mapMutations(['setUser']),
     // 对用户的信息进行验证，如果验证成功，返回true，如果不成功，返回false (代码有语义化)
     checkInfo (user) {
       if (!user.mobile) {
@@ -55,7 +58,13 @@ export default {
       // 3. 调用接口
       try {
         const result = await login(this.user)
-        console.log(result)
+        console.log(result.data.data)
+        this.$toast.success('登录成功')
+        // 保存信息到vuex中
+        // 方式一：
+        // this.$store.commit('setUser', result.data.data)
+        // 方式二：
+        this.setUser(result.data.data)
         // todo:跳转到首页
       } catch (err) {
         // console.log(err)

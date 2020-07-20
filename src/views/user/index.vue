@@ -1,9 +1,23 @@
 <template>
-  <div class='container'>User</div>
+  <div class='container'>
+    {{$store.state.user}}
+  </div>
 </template>
 
 <script>
-export default { name: 'UserIndex', data () { return {} } }
+import { getInfo } from '@/api/user.js'
+export default {
+  name: 'UserIndex',
+  data () {
+    return {
+
+    }
+  },
+  async created () {
+    const result = await getInfo()
+    console.log(result)
+  }
+}
 </script>
 
 <style scoped lang='less'></style>
