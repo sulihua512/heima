@@ -5,6 +5,7 @@
   right-text="搜索"
   left-arrow
   @click-right="hReach"
+  fixed
 />
     <router-view></router-view>
     <van-tabbar  route>

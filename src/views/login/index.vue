@@ -65,7 +65,8 @@ export default {
         // this.$store.commit('setUser', result.data.data)
         // 方式二：
         this.setUser(result.data.data)
-        // todo:跳转到首页
+        // 跳转到首页
+        this.$router.push('/')
       } catch (err) {
         // console.log(err)
         // 错误信息
